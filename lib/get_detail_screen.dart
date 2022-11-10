@@ -18,7 +18,7 @@ class _GetDataDetailScreenState extends State<GetDataDetailScreen> {
 
   @override
   void initState() {
-    var url = "htpps://reqres.in/api/users/${value.toString()}";
+    var url = "https://reqres.in/api/users/${value.toString()}";
     _getRefreshDaata(url);
 
     print("susu +${value}");
@@ -37,7 +37,7 @@ class _GetDataDetailScreenState extends State<GetDataDetailScreen> {
     print(response.body);
     setState(() {
       var convertDataToJson = jsonDecode(response.body);
-      data = convertDataToJson[data];
+      data = convertDataToJson['data'];
     });
   }
 
